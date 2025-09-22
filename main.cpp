@@ -1,4 +1,3 @@
-#include <iostream>
 /*
  *Program......: Math Tutor V2
  *Programmers..: Nathan Fletcher, Sean Lee
@@ -6,7 +5,10 @@
  *Github Repo..: https://github.com/ChThomas24/MathTutorV2new/blob/master/MathTutorV2.md
  *Description..: An easy math tutor for young people to learn simple math skills.
 */
+
+#include <iostream>
 using namespace std;
+
 int main()
 { string userName = "";
     int userAnswer = 0;
