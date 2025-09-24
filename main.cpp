@@ -64,6 +64,17 @@ int main()
         leftNum = rightNum;
         rightNum = temp;
     }
+    switch (mathType) {
+      case 1: Addition//
+        correctAnswer = leftNum + rightNum;
+        mathSymbol = '+';
+
+
+
+
+
+    }
+    cout << leftNum << " " << mathSymbol << " " << rightNum << endl;
 
     cout << "Sorry, this is all the program does for this moment. " << endl;
     cout << "Version 2 is coming soon... " << endl;
