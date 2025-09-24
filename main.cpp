@@ -7,13 +7,24 @@
 */
 
 #include <iostream>
+#include <random>
+#include <ctime>
+#include <list>
 using namespace std;
 
 int main()
-{ string userName = "";
-    int userAnswer = 0;
+{
+    string userName = "";
     int leftNum = 1;
-    int rightNum = 2;
+    int rightNum = 1;
+    int mathType = 1;
+    char mathSymbol;
+    int correctAnswer = 0;
+    int userAnswer = 0;
+    int temp = 0;
+
+    srand(time(0));
+
     cout << R"(
 
  __  __       _   _       _____      _
@@ -43,6 +54,16 @@ int main()
     cout << userName;
     cout << " to the Silly Simple Math Tutor!";
     cout << endl;
+
+    leftNum = rand() %10 + 1;
+    rightNum = rand() %10 + 1;
+    mathType = rand() %4 +1;
+
+    if (rightNum > leftNum) {
+        temp = leftNum;
+        leftNum = rightNum;
+        rightNum = temp;
+    }
 
     cout << "Sorry, this is all the program does for this moment. " << endl;
     cout << "Version 2 is coming soon... " << endl;
