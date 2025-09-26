@@ -64,17 +64,41 @@ int main()
         leftNum = rightNum;
         rightNum = temp;
     }
+
     switch (mathType) {
-      case 1: Addition//
-        correctAnswer = leftNum + rightNum;
-        mathSymbol = '+';
-
-
-
-
-
+        case 1:
+            correctAnswer = leftNum + rightNum;
+            mathSymbol = '+';
+            break;
+        case 2:
+            correctAnswer = leftNum - rightNum;
+            mathSymbol = '-';
+            break;
+        case 3:
+            correctAnswer = leftNum * rightNum;
+            mathSymbol = '*';
+            break;
+        case 4:
+            correctAnswer = leftNum;
+            leftNum *= rightNum;
+            mathSymbol = '/';
+            break;
+        default:
+            cout << "Incorrect math type: " << mathType << endl;
+            cout << "Program ended with error code -1" << endl;
+            cout << "Please report this error to Sean Lee" << endl;
+            exit(-1);
     }
-    cout << leftNum << " " << mathSymbol << " " << rightNum << endl;
+
+    cout << leftNum << " " << mathSymbol << " " << rightNum << " = ";
+    cin >> userAnswer;
+
+    if (userAnswer == correctAnswer) {
+        cout << "Correct Answer!" << endl;
+    }
+    else {
+        cout << "Wrong Answer! The correct answer is: " << correctAnswer << endl;
+    }
 
     cout << "Sorry, this is all the program does for this moment. " << endl;
     cout << "Version 2 is coming soon... " << endl;
