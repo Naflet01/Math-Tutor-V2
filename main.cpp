@@ -23,17 +23,15 @@ int main()
     int userAnswer = 0;
     int temp = 0;
 
-    srand(time(0));
+    srand(static_cast<unsigned int>(time(0)));
 
-    cout << R"(
 
- __  __       _   _       _____      _
-|  \/  | __ _| |_| |__   |_   _|   _| |_ ___  _ __
-| |\/| |/ _` | __| '_ \    | || | | | __/ _ \| '__|
-| |  | | (_| | |_| | | |   | || |_| | || (_) | |
-|_|  |_|\__,_|\__|_| |_|   |_| \__,_|\__\___/|_|
+    cout << " __  __       _   _       _____      _" << endl;
+    cout << "|  \\/  | __ _| |_| |__   |_   _|   _| |_ ___  _ __" << endl;
+    cout << "| |\\/| |/ _` | __| '_ \\    | || | | | __/ _ \\| '__|" << endl;
+    cout << "| |  | | (_| | |_| | | |   | || |_| | || (_) | |" << endl;
+    cout << "|_|  |_|\\__,_|\\__|_| |_|   |_| \\__,_|\\__\\___/|_|" << endl;
 
-)" << endl;
     cout << "********************************************************************************************************" << endl;
     cout << "*                          Welcome to the Silly Simple Math Tutor                                      *" << endl;
     cout << "********************************************************************************************************" << endl;
@@ -57,13 +55,8 @@ int main()
 
     leftNum = rand() %10 + 1;
     rightNum = rand() %10 + 1;
-    mathType = rand() %4 +1;
+    mathType = rand() %4 + 1;
 
-    if (rightNum > leftNum) {
-        temp = leftNum;
-        leftNum = rightNum;
-        rightNum = temp;
-    }
 
     switch (mathType) {
         case 1:
@@ -71,6 +64,11 @@ int main()
             mathSymbol = '+';
             break;
         case 2:
+            if (rightNum > leftNum) {
+                temp = leftNum;
+                leftNum = rightNum;
+                rightNum = temp;
+            }
             correctAnswer = leftNum - rightNum;
             mathSymbol = '-';
             break;
@@ -94,10 +92,13 @@ int main()
     cin >> userAnswer;
 
     if (userAnswer == correctAnswer) {
-        cout << "Correct Answer!" << endl;
+        cout << "Congratulations, " << userName << " that is the correct answer!" << endl;
+        cout << endl;
     }
     else {
-        cout << "Wrong Answer! The correct answer is: " << correctAnswer << endl;
+        cout << "Sorry, that is incorrect!" << endl;
+        cout << "The correct answer is: " << correctAnswer << endl;
+        cout << endl;
     }
 
     cout << "Sorry, this is all the program does for this moment. " << endl;
