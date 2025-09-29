@@ -3,7 +3,7 @@
  *Programmers..: Nathan Fletcher, Sean Lee
  *Date.........: 2025.22.9
  *Github Repo..: https://github.com/ChThomas24/MathTutorV2new/blob/master/MathTutorV2.md
- *Description..: An easy math tutor for young people to learn simple math skills.
+ *Description..: An easy math tutor that lets the user know if their answer is correct or incorrect.
 */
 
 #include <iostream>
@@ -25,7 +25,7 @@ int main()
 
     srand(static_cast<unsigned int>(time(0)));
 
-
+    //Opening to math tutor program
     cout << " __  __       _   _       _____      _" << endl;
     cout << "|  \\/  | __ _| |_| |__   |_   _|   _| |_ ___  _ __" << endl;
     cout << "| |\\/| |/ _` | __| '_ \\    | || | | | __/ _ \\| '__|" << endl;
@@ -44,26 +44,29 @@ int main()
     cout << endl;
     cout << "*******************************************************************************************************" << endl;
 
+    //asking user for their name
     cout << endl;
     cout << "What is your name? ";
     cin >> userName;
 
+    //welcome user for input name
     cout << "Welcome ";
     cout << userName;
     cout << " to the Silly Simple Math Tutor!";
     cout << endl;
 
+    //this is where a random number is generated
     leftNum = rand() %10 + 1;
     rightNum = rand() %10 + 1;
     mathType = rand() %4 + 1;
 
-
+    //here a random operator is generated for the question to the user
     switch (mathType) {
-        case 1:
+        case 1: //addition
             correctAnswer = leftNum + rightNum;
             mathSymbol = '+';
             break;
-        case 2:
+        case 2: //subtraction
             if (rightNum > leftNum) {
                 temp = leftNum;
                 leftNum = rightNum;
@@ -72,25 +75,26 @@ int main()
             correctAnswer = leftNum - rightNum;
             mathSymbol = '-';
             break;
-        case 3:
+        case 3: //subtraction
             correctAnswer = leftNum * rightNum;
             mathSymbol = '*';
             break;
-        case 4:
+        case 4: //division
             correctAnswer = leftNum;
             leftNum *= rightNum;
             mathSymbol = '/';
             break;
-        default:
+        default: //error handling
             cout << "Incorrect math type: " << mathType << endl;
             cout << "Program ended with error code -1" << endl;
             cout << "Please report this error to Sean Lee" << endl;
             exit(-1);
     }
-
+    //outputs the question to the user
     cout << leftNum << " " << mathSymbol << " " << rightNum << " = ";
     cin >> userAnswer;
 
+    //this tells the user if their answer was correct or incorrect
     if (userAnswer == correctAnswer) {
         cout << "Congratulations, " << userName << " that is the correct answer!" << endl;
         cout << endl;
@@ -100,7 +104,7 @@ int main()
         cout << "The correct answer is: " << correctAnswer << endl;
         cout << endl;
     }
-
+    //programming closing message
     cout << "Sorry, this is all the program does for this moment. " << endl;
     cout << "Version 2 is coming soon... " << endl;
     cout << "End of program. " << endl;
