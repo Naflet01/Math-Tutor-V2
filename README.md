@@ -11,7 +11,7 @@ https://youtu.be/eVGEea7adDM?si=cz1Fbqxr9VgioIEh
 - [Maintainers](#maintainers)`
 
 ## Summary
-A simple math tutor that teaches you simple math problems.
+A simple math tutor that generates a randoms question lets the user know if their answer is right or wrong. 
 
 ## Console Output Testing Example
 ```
