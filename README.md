@@ -11,17 +11,16 @@ https://youtu.be/eVGEea7adDM?si=cz1Fbqxr9VgioIEh
 - [Maintainers](#maintainers)`
 
 ## Summary
-A simple math tutor that teaches you simple math problems.
+A simple math tutor that generates a randoms question lets the user know if their answer is right or wrong. 
 
 ## Console Output Testing Example
 ```
+C:\Users\fletc\CLionProjects\Math-Tutor-V2.1\cmake-build-debug\Math_Tutor_V2_1.exe
  __  __       _   _       _____      _
 |  \/  | __ _| |_| |__   |_   _|   _| |_ ___  _ __
 | |\/| |/ _` | __| '_ \    | || | | | __/ _ \| '__|
 | |  | | (_| | |_| | | |   | || |_| | || (_) | |
 |_|  |_|\__,_|\__|_| |_|   |_| \__,_|\__\___/|_|
-
-
 ********************************************************************************************************
 *                          Welcome to the Silly Simple Math Tutor                                      *
 ********************************************************************************************************
@@ -34,15 +33,19 @@ Fun Math Facts
 
 *******************************************************************************************************
 
-What is your name?Sean
+What is your name? Nathan
 
-Welcome Sean to the Silly Simple Math Tutor!
-9 - 5 =4
+Welcome Nathan to the Silly Simple Math Tutor!
+10 * 4 = 2
 
-Correct Answer!
+Sorry, that is incorrect!
+The correct answer is: 40
+
 Sorry, this is all the program does for this moment.
 Version 2 is coming soon...
 End of program.
+
+Process finished with exit code 0
 
 ```
 
